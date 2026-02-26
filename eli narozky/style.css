@@ -1,0 +1,70 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', sans-serif;
+}
+
+body {
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    background: url("background.jpg") center/cover no-repeat;
+    position: relative;
+}
+
+/* růžové ztmavení přes obrázek */
+body::after {
+    content: "";
+    position: fixed;
+    inset: 0;
+    background: rgba(255, 182, 193, 0.35);
+    backdrop-filter: blur(3px);
+    z-index: 0;
+}
+
+/* HLAVNÍ KARTA */
+.container {
+    position: relative;
+    z-index: 1; /* důležité */
+    background: rgba(255, 255, 255, 0.92);
+    padding: 40px;
+    border-radius: 20px;
+    text-align: center;
+    width: 90%;
+    max-width: 500px;
+    box-shadow: 0 15px 35px rgba(0,0,0,0.3);
+}
+
+h1 {
+    margin-bottom: 20px;
+    color: #ff4e91;
+}
+
+p {
+    margin-bottom: 20px;
+    font-size: 18px;
+}
+
+button {
+    padding: 12px 25px;
+    margin: 8px 0;
+    border: none;
+    border-radius: 25px;
+    cursor: pointer;
+    background: linear-gradient(45deg, #ff4e91, #ff7eb3);
+    color: white;
+    font-weight: bold;
+    transition: 0.2s;
+    width: 100%;
+}
+
+button:hover {
+    transform: scale(1.05);
+}
+
+button:active {
+    transform: scale(0.95);
+}
